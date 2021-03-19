@@ -15,6 +15,7 @@ const styles = {
     border: '0px',
     color: 'white',
 		cursor: 'pointer',
+    marginLeft: '20px',
     padding: '5px 15px 5px 15px',
     ':hover': {
       animation: 'x 0.8s ease',
@@ -35,7 +36,6 @@ const styles = {
   }
 };
 
-
 class Button extends React.Component {
   handleClick(){
     this.props.click ? this.props.click() : ""
@@ -50,7 +50,6 @@ class Button extends React.Component {
           styles.base,
           this.props.block && styles.block,
           this.props.customStyle ? {background: this.props.customStyle} : "",
-
         ]}>
         {this.props.children}
       </button>

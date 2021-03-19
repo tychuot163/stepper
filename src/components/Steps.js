@@ -8,10 +8,11 @@ import {
 import styles from "../styles";
 import Button from "./Button";
 
+
 export const Step = ({ num, text }) => (
-  <div key={num} style={styles.stageContent}>
-    {text}
-  </div>
+    <div key={num} style={styles.stageContent} >
+      {text}
+    </div>
 );
 
 const entering = node => {
@@ -33,16 +34,17 @@ const entering = node => {
     }
   ).delay(0.4);
 };
+
 const exiting = node => {
   TweenLite.to(node, 0.6, {
     opacity: 0,
-    onComplete: console.log("hgdfhdgfj")
+    onComplete: console.log("Pass")
   });
 };
 
 class Steps extends Component {
   render() {
-    const { stage, handleClick } = this.props;
+    const { stage, handleNextQuiz, handlePreviousQuiz } = this.props;
     const count = React.Children.count(this.props.children);
     const children = React.Children.map(this.props.children, child => {
       return (
@@ -64,13 +66,16 @@ class Steps extends Component {
           <TransitionGroup>{children}</TransitionGroup>
         </div>
         <div style={styles.stageButton}>
-          <Button disabled={stage === count} click={handleClick}>
+        <Button disabled={ stage === 1 } click={handlePreviousQuiz}>
+            Back
+          </Button>
+         <Button disabled={stage === count } click={handleNextQuiz}>
             Continue
+            
           </Button>
         </div>
       </div>
     );
   }
 }
-
 export default Steps;

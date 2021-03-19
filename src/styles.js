@@ -17,6 +17,7 @@ const styles = {
 			background: 'white',
 			border: "2px solid #ccc",
 			borderRadius: '8px',
+			backgroundImage: "url(" + "https://i.imgur.com/g0WkF7Y.png" + ")",
 	},
 	stagesContainer: {
 			flex: 1,
@@ -27,7 +28,6 @@ const styles = {
 			height: 'calc(100% - 20px)',
 			border: "2px solid #ccc",
 			borderRadius: '8px',
-
 	},
 	stages:{
 		display: 'flex',
@@ -48,8 +48,9 @@ const styles = {
 		position: "absolute",
 		justifyContent: 'center',
 		alignItems: 'center',
-		fontSize: "40px",
+		fontSize: "60px",
 		color: '#a1a1a1',
+		// backgroundImage: "url(" + "https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" + ")",
 		fontWeight: 700
 	},
 	stageButton: {
@@ -58,6 +59,7 @@ const styles = {
 		height: "40px",
 		marginTop: "20px",
 		marginRight: "10px",
+		marginLeft: "20px",
 		marginBottom: '10px'
 	},
 	circle: {
@@ -84,7 +86,5 @@ const styles = {
 		border: '3px solid #6bada7',
 	},
 }
-
-
 
 export default styles
