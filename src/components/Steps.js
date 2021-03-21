@@ -62,7 +62,7 @@ class Steps extends Component {
     });
     return (
       <div style={styles.stagesContainer}>
-        <div style={styles.stages}>
+        <div style={styles.stages} >
           <TransitionGroup>{children}</TransitionGroup>
         </div>
         <div style={styles.stageButton}>
@@ -71,7 +71,6 @@ class Steps extends Component {
           </Button>
          <Button disabled={stage === count } click={handleNextQuiz}>
             Continue
-            
           </Button>
         </div>
       </div>
