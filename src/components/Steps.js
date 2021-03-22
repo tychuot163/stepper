@@ -12,7 +12,9 @@ import Button from "./Button";
 export const Step = ({ num, text }) => (
     <div key={num} style={styles.stageContent} >
       {text}
+      <br/>
     </div>
+    
 );
 
 const entering = node => {
