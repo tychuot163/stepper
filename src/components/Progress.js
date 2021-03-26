@@ -11,7 +11,7 @@ export const Stage = ({stage, num}) => (
 
 const renderIcon = (stage, num) => {
 	if (stage === num) {
-		return <HourGlass size="30px" />;
+		return <HourGlass size="20px" />;
 	} else if (stage < num) {
 		return (
 			<div>
